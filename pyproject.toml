@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "chaosraft"
+version = "0.1.0"
+description = "Ein Kurs um das Raftprotokoll zu implementieren"
+authors = ["Olaf Gladis <hwmrocker@gladis.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+furo = "*"
+myst-parser = "*"
+commonmark = "*"
+sphinx-autobuild = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

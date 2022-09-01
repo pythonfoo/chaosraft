@@ -1,0 +1,23 @@
+import socket
+
+
+def client(host, port, input=input) -> bytes:
+    """
+    TODO: Implementiere einen Client, der einen RAW-Socket eröffnet und mit dem Server verbindet
+    und die Antwort des Servers zurückliefert.
+
+    :param host: Hostname des Servers
+    :param port: Port des Servers
+    :return: Antwort des Servers
+    """
+
+    daten_für_den_server = input("Daten für den Server: ")
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect((host, port))
+    sock.send(daten_für_den_server)
+    antwort = sock.recv(1024)
+    sock.close()
+    return antwort
+
+    return b""
